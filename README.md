@@ -2,6 +2,9 @@
 
 This repository contains an n8n workflow designed to automate the collection, analysis, and reporting of financial news and data from various sources. The workflow gathers information on Forex, cryptocurrency, and general economic news, processes it, generates insights using AI, and sends a comprehensive report to a Discord channel.
 
+## Workflow Preview
+![Workflow](workflow.png)
+
 ## 🚀 Features
 
 - **Multi-Source Data Aggregation**: Fetches news and data from dozens of RSS feeds covering different financial sectors.
@@ -40,6 +43,9 @@ The workflow is triggered by a schedule and performs the following steps:
     * The workflow posts the report to a designated Discord channel.
     * Before sending the new report, it clears the previous messages in the channel to keep it clean.
 
+## Example Output
+![Discord Output](discord.png)
+
 ## 🛠️ Setup and Installation
 
 To use this workflow, you'll need:
@@ -56,5 +62,4 @@ Once the workflow is imported and the credentials are set, you can activate it.
 ## 🤝 Contributing
 
 Contributions are welcome! If you have suggestions for new data sources, improvements to the AI prompts, or any other enhancements, feel free to open an issue or submit a pull request.
-
 
