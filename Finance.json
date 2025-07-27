@@ -1,0 +1,2610 @@
+{
+  "name": "Finance",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://www.actionforex.com/category/technical-outlook/eurusd-outlook/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        960
+      ],
+      "id": "3d694f77-1484-49a8-8e15-3ae191fa9b22",
+      "name": "eurusd"
+    },
+    {
+      "parameters": {
+        "url": "https://www.actionforex.com/category/technical-outlook/eurchf-outlook/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        1344
+      ],
+      "id": "ad5b3ece-adc2-480b-b219-9364cd016c21",
+      "name": "eurchf"
+    },
+    {
+      "parameters": {
+        "url": "https://www.actionforex.com/category/technical-outlook/usdjpy-outlook/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        1728
+      ],
+      "id": "5904d09d-7436-4511-bb54-c4427a017a4f",
+      "name": "usdjpy"
+    },
+    {
+      "parameters": {
+        "url": "https://www.actionforex.com/category/technical-outlook/usdcad-outlook/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        1920
+      ],
+      "id": "044030bb-2391-40b1-87d0-ccf3fb65689d",
+      "name": "usdcad"
+    },
+    {
+      "parameters": {
+        "url": "https://www.actionforex.com/category/technical-outlook/usdchf-outlook/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        2112
+      ],
+      "id": "dd3a7b5e-31d9-4cd5-b888-90c4eacdfd22",
+      "name": "usdchf"
+    },
+    {
+      "parameters": {
+        "url": "https://www.actionforex.com/category/technical-outlook/euraud-outlook/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        2304
+      ],
+      "id": "d2baee1a-f656-4ec9-9cbf-bf08ff270f2b",
+      "name": "euraud"
+    },
+    {
+      "parameters": {
+        "url": "https://www.actionforex.com/category/technical-outlook/gbpusd-outlook/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        2496
+      ],
+      "id": "f1537eb5-3877-4751-9d2e-99d821b3774e",
+      "name": "gbpusd"
+    },
+    {
+      "parameters": {
+        "url": "https://www.actionforex.com/category/technical-outlook/gbpjpy-outlook/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        2688
+      ],
+      "id": "511a67d1-23da-4834-95b8-e17798a17c08",
+      "name": "gbpjpy"
+    },
+    {
+      "parameters": {
+        "url": "https://www.actionforex.com/category/technical-outlook/audusd-outlook/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        2880
+      ],
+      "id": "3f76e45e-6f23-4327-a254-426d0b4d0de1",
+      "name": "audusd"
+    },
+    {
+      "parameters": {
+        "url": "https://www.actionforex.com/category/technical-outlook/eurgbp-outlook/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        3072
+      ],
+      "id": "18b989d6-52de-4b9e-a26c-27659d49a155",
+      "name": "eurgbp"
+    },
+    {
+      "parameters": {
+        "url": "https://www.actionforex.com/category/technical-outlook/eurjpy-outlook/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        3264
+      ],
+      "id": "19c3b7c6-f762-4d6a-b015-b9b907c30ea7",
+      "name": "eurjpy"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 12,
+              "triggerAtMinute": 2
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -8848,
+        1616
+      ],
+      "id": "3b5eb933-7d45-4613-8915-25170f41e2d5",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "numberInputs": 10
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -8000,
+        2176
+      ],
+      "id": "5b8540dd-c8e4-4010-87f3-e5125967876e",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "fa24b368-4693-4068-b807-e7a5b677e796",
+              "leftValue": "={{ DateTime.fromISO($json.isoDate) }}",
+              "rightValue": "={{$today.minus(8, \"day\")}}",
+              "operator": {
+                "type": "dateTime",
+                "operation": "after"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        -7568,
+        2304
+      ],
+      "id": "d649d833-2e05-4b53-b29f-fe9e7a10bfd7",
+      "name": "week filter"
+    },
+    {
+      "parameters": {
+        "url": "https://cointelegraph.com/rss",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        3456
+      ],
+      "id": "9f09d60e-6eab-418e-a262-51e10ac971fc",
+      "name": "https://cointelegraph.com/rss"
+    },
+    {
+      "parameters": {
+        "url": "https://bitcoinist.com/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        3648
+      ],
+      "id": "260566d3-177c-4638-b006-dd098b7ab3ec",
+      "name": "https://bitcoinist.com/feed/"
+    },
+    {
+      "parameters": {
+        "url": "https://cointelegraph.com/rss/category/market-analysis",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        3840
+      ],
+      "id": "2b848612-fd9c-42ec-8de0-8bb4e42cea62",
+      "name": "https://cointelegraph.com/rss/category/market-analysis"
+    },
+    {
+      "parameters": {
+        "url": "https://cointelegraph.com/rss/category/weekly-overview",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        4032
+      ],
+      "id": "d1d203d7-45b7-436d-95b9-996f342516eb",
+      "name": "https://cointelegraph.com/rss/category/weekly-overview"
+    },
+    {
+      "parameters": {
+        "url": "https://cointelegraph.com/rss/tag/ethereum",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        4224
+      ],
+      "id": "491d70de-ee95-41ce-90a8-390d189cd6f8",
+      "name": "https://cointelegraph.com/rss/tag/ethereum"
+    },
+    {
+      "parameters": {
+        "url": "https://cointelegraph.com/rss/tag/bitcoin",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        4416
+      ],
+      "id": "636be5a6-fb28-4130-83b3-83884056cbf9",
+      "name": "https://cointelegraph.com/rss/tag/bitcoin"
+    },
+    {
+      "parameters": {
+        "url": "https://bitcoinist.com/rss",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        4608
+      ],
+      "id": "0f8d0217-72d7-4f73-b12b-f8e87035510e",
+      "name": "https://bitcoinist.com/rss"
+    },
+    {
+      "parameters": {
+        "url": "https://cointelegraph.com/rss/tag/monero",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        4800
+      ],
+      "id": "1a79e0a9-f2ab-4e09-8b96-c6601d55eb9f",
+      "name": "https://cointelegraph.com/rss/tag/monero"
+    },
+    {
+      "parameters": {
+        "url": "https://cointelegraph.com/rss/tag/regulation",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        4992
+      ],
+      "id": "55b3950d-af38-4777-a7f6-589f3a9071ea",
+      "name": "https://cointelegraph.com/rss/tag/regulation"
+    },
+    {
+      "parameters": {
+        "url": "http://bitcoinist.com/category/ethereum/rss",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        5184
+      ],
+      "id": "0c69ff29-cfc7-4f9e-968b-86b1dfb11de6",
+      "name": "http://bitcoinist.com/category/ethereum/rss"
+    },
+    {
+      "parameters": {
+        "numberInputs": 10
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -8000,
+        4192
+      ],
+      "id": "24c4c6fa-0f63-4c2f-8bf4-b97f70fff1b7",
+      "name": "Merge1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "fa24b368-4693-4068-b807-e7a5b677e796",
+              "leftValue": "={{ DateTime.fromISO($json.isoDate) }}",
+              "rightValue": "={{$today.minus(8, \"day\")}}",
+              "operator": {
+                "type": "dateTime",
+                "operation": "after"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        -7568,
+        4320
+      ],
+      "id": "5780a9b7-0d92-4b2e-b5bf-a947aa3f8a26",
+      "name": "week filter1"
+    },
+    {
+      "parameters": {
+        "url": "https://gregmankiw.blogspot.com/feeds/posts/default",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        -960
+      ],
+      "id": "9fcc080b-3dd0-4177-90b6-b6314b79c270",
+      "name": "https://gregmankiw.blogspot.com/feeds/posts/default"
+    },
+    {
+      "parameters": {
+        "url": "https://econbrowser.com/feed",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        -576
+      ],
+      "id": "70d44223-fd9b-4d15-bbad-3324dc1fc1fa",
+      "name": "https://econbrowser.com/feed"
+    },
+    {
+      "parameters": {
+        "url": "https://www.nakedcapitalism.com/feed",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        -192
+      ],
+      "id": "60104afd-c69e-4d6b-b935-399456ecc49b",
+      "name": "https://www.nakedcapitalism.com/feed"
+    },
+    {
+      "parameters": {
+        "url": "https://www.economywatch.com/feed",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        0
+      ],
+      "id": "ba33f299-8bf9-42d0-8124-9cb480e65dd7",
+      "name": "https://www.economywatch.com/feed"
+    },
+    {
+      "parameters": {
+        "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        384
+      ],
+      "id": "1933d33b-5b42-480e-9c7d-338594567f51",
+      "name": "https://feeds.content.dowjones.io/public/rss/mw_topstories"
+    },
+    {
+      "parameters": {
+        "url": "https://feeds.content.dowjones.io/public/rss/mw_marketpulse",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        -1152
+      ],
+      "id": "8c580a6e-0f87-49f8-8ad7-6b328e36ae43",
+      "name": "https://feeds.content.dowjones.io/public/rss/mw_topstories1"
+    },
+    {
+      "parameters": {
+        "url": "https://www.investing.com/rss/bonds.rss",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        -1728
+      ],
+      "id": "3e9b423b-d0eb-42a0-94d4-52bf519f8170",
+      "name": "https://www.investing.com/rss/bonds.rss"
+    },
+    {
+      "parameters": {
+        "url": "https://www.investing.com/rss/commodities.rss",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        -1344
+      ],
+      "id": "95c04673-8286-4cd2-aaa7-fb46b388739a",
+      "name": "https://www.investing.com/rss/commodities.rss"
+    },
+    {
+      "parameters": {
+        "url": "https://www.investing.com/rss/stock.rss",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        -1536
+      ],
+      "id": "04be102d-8552-420f-b807-a13e7b227c7a",
+      "name": "https://www.investing.com/rss/stock.rss"
+    },
+    {
+      "parameters": {
+        "url": "https://www.ft.com/rss/home",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        -2112
+      ],
+      "id": "9d24906d-e055-4290-b33f-3c0c5dcd3285",
+      "name": "https://www.ft.com/rss/home"
+    },
+    {
+      "parameters": {
+        "url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/business/economy/rss.xml",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        -1920
+      ],
+      "id": "c94f1322-bb00-4b12-9fc8-1dbea13c910c",
+      "name": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/business/economy/"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "fa24b368-4693-4068-b807-e7a5b677e796",
+              "leftValue": "={{ DateTime.fromISO($json.isoDate) }}",
+              "rightValue": "={{$today.minus(8, \"day\")}}",
+              "operator": {
+                "type": "dateTime",
+                "operation": "after"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        -7568,
+        -1152
+      ],
+      "id": "1aba3303-0ee4-4d0f-8924-e8e9074a4dbd",
+      "name": "week filter2"
+    },
+    {
+      "parameters": {
+        "url": "http://www.oilandgas360.com/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        192
+      ],
+      "id": "c3ab99d1-d539-445b-99cd-0ef39ceaf40a",
+      "name": "http://www.oilandgas360.com/feed/"
+    },
+    {
+      "parameters": {
+        "url": "https://www.mees.com/latest-issue/rss",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        576
+      ],
+      "id": "43152688-b98b-4c92-b708-723277cd4cbe",
+      "name": "https://www.mees.com/latest-issue/rss"
+    },
+    {
+      "parameters": {
+        "url": "https://www.bullionstar.com/rss/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        768
+      ],
+      "id": "5cd3568e-b255-4a51-94d0-0dd378e4c3c9",
+      "name": "https://www.bullionstar.com/rss/"
+    },
+    {
+      "parameters": {
+        "url": "https://feeds.feedburner.com/BlanchardInvestingNewsBlog",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        1152
+      ],
+      "id": "231c34c4-b48e-4a45-8e64-0c42dd50d68d",
+      "name": "https://feeds.feedburner.com/BlanchardInvestingNewsBlog"
+    },
+    {
+      "parameters": {
+        "url": "https://www.goldirainvestmentguy.com/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        1536
+      ],
+      "id": "7b20de17-a13e-4b26-af6e-47325298424f",
+      "name": "https://www.goldirainvestmentguy.com/feed/"
+    },
+    {
+      "parameters": {
+        "url": "https://www.fxempire.com/api/v1/en/articles/rss/news",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        -384
+      ],
+      "id": "a43ae351-9295-4abb-b8b4-ed64c8bcd3b3",
+      "name": "https://www.fxempire.com/api/v1/en/articles/rss/news"
+    },
+    {
+      "parameters": {
+        "url": "https://www.fxempire.com/api/v1/en/articles/rss/forecasts",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        -8224,
+        -768
+      ],
+      "id": "f3e54356-b343-4163-b1c7-eab0213d5dbd",
+      "name": "https://www.fxempire.com/api/v1/en/articles/rss/forecasts"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -8000,
+        -576
+      ],
+      "id": "9e0d3e68-c87c-413c-a2c4-3ebbb43a24cf",
+      "name": "Merge3"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -8000,
+        320
+      ],
+      "id": "1bca86f8-b1ef-4c7f-8327-130b8d3eaa64",
+      "name": "Merge4"
+    },
+    {
+      "parameters": {
+        "numberInputs": 3
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -8000,
+        1136
+      ],
+      "id": "6c200ac4-dcc6-4aeb-9178-c0e5b7c89ca8",
+      "name": "Merge5"
+    },
+    {
+      "parameters": {
+        "numberInputs": 3
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -6928,
+        368
+      ],
+      "id": "0203cc2a-e873-42f7-8cd3-d37b13aa95cd",
+      "name": "Merge6"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "fa24b368-4693-4068-b807-e7a5b677e796",
+              "leftValue": "={{ DateTime.fromISO($json.isoDate) }}",
+              "rightValue": "={{$today.minus(8, \"day\")}}",
+              "operator": {
+                "type": "dateTime",
+                "operation": "after"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        -7568,
+        320
+      ],
+      "id": "c40e2cc4-1349-476b-b58d-d69c8e57e8a1",
+      "name": "week filter3"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "fa24b368-4693-4068-b807-e7a5b677e796",
+              "leftValue": "={{ DateTime.fromISO($json.isoDate) }}",
+              "rightValue": "={{$today.minus(8, \"day\")}}",
+              "operator": {
+                "type": "dateTime",
+                "operation": "after"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        -7568,
+        -576
+      ],
+      "id": "69d1587a-596d-4b0a-8103-5597d065e73e",
+      "name": "week filter4"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "fa24b368-4693-4068-b807-e7a5b677e796",
+              "leftValue": "={{ DateTime.fromISO($json.isoDate) }}",
+              "rightValue": "={{$today.minus(8, \"day\")}}",
+              "operator": {
+                "type": "dateTime",
+                "operation": "after"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        -7568,
+        1152
+      ],
+      "id": "0b9ddfc9-4484-49ae-96f4-67143f707114",
+      "name": "week filter5"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Initialize an empty array to store the processed content\nlet processedArray = [];\n\n// Loop over the input items and process them based on the availability of 'content' or 'title'\nfor (const item of $input.all()) {\n  // Extract 'content:encoded' if available, or fallback to 'title' if 'content:encoded' is empty\n  let content = item.json['content:encoded'] || item.json['title'];\n\n  // Check if the content exists\n  if (content) {\n    // Optionally, process the content (e.g., converting to uppercase or any other transformation)\n    let processedContent = content.toUpperCase().replace(/<[^>]+>/g, '').replace(/\\n/g, '').replace(/\\t/g, '');  // Example: converting to uppercase\n\n    // Push the processed content into the array\n    processedArray.push(processedContent);\n\n    // Optionally, log the processed content for debugging purposes\n    console.log(processedContent);\n  } else {\n    // If neither content nor title is available, you can handle the case here\n    console.log('No content or title available.');\n  }\n}\n\n// Return the array with the processed content for use in later nodes\nreturn [{ json: { processedArray } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -7344,
+        4320
+      ],
+      "id": "dd24fa9f-79c3-4674-b3a6-4fba20500719",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ccdefe94-60df-4322-ae36-fd6117a33a02",
+              "name": "output",
+              "value": "={{ $json.output }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -6640,
+        4320
+      ],
+      "id": "2533c9f6-29ab-4fd6-a290-9f972eb8cb19",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Initialize an empty array to store the processed content\nlet processedArray = [];\n\n// Loop over the input items and process them based on the availability of 'content' or 'title'\nfor (const item of $input.all()) {\n  // Extract 'content:encoded' if available, or fallback to 'title' if 'content:encoded' is empty\n  let content = item.json['content:encoded'] || item.json['title'];\n\n  // Check if the content exists\n  if (content) {\n    // Optionally, process the content (e.g., converting to uppercase or any other transformation)\n    let processedContent = content.toUpperCase().replace(/<[^>]+>/g, '').replace(/\\n/g, '').replace(/\\t/g, '');  // Example: converting to uppercase\n\n    // Push the processed content into the array\n    processedArray.push(processedContent);\n\n    // Optionally, log the processed content for debugging purposes\n    console.log(processedContent);\n  } else {\n    // If neither content nor title is available, you can handle the case here\n    console.log('No content or title available.');\n  }\n}\n\n// Return the array with the processed content for use in later nodes\nreturn [{ json: { processedArray } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -7344,
+        2304
+      ],
+      "id": "691c47bd-f6af-4be2-9c87-a03c71edfb4d",
+      "name": "Code1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ccdefe94-60df-4322-ae36-fd6117a33a02",
+              "name": "output",
+              "value": "={{ $json.output }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -6640,
+        2304
+      ],
+      "id": "23102d8b-8197-4810-a562-8d03befe2df1",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.processedArray }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "You are a forex finance analyst, you have access to news titles, make a resume of everything with concise data separation, only use text, the main motif is for investment advice."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.1,
+      "position": [
+        -7120,
+        2304
+      ],
+      "id": "6ce657f2-b56a-48bd-8957-f3d66d5da661",
+      "name": "forex"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.processedArray }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "You are a crypto finance analyst, you have access to news titles, make a resume of everything with concise data separation, only use text."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.1,
+      "position": [
+        -7120,
+        4320
+      ],
+      "id": "4c72ff43-d3de-4111-b9d0-0abb02afdc0c",
+      "name": "crypto"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Initialize an empty array to store the processed content\nlet processedArray = [];\n\n// Loop over the input items and process them based on the availability of 'content' or 'title'\nfor (const item of $input.all()) {\n  // Extract 'content:encoded' if available, or fallback to 'title' if 'content:encoded' is empty\n  let content = item.json['content:encoded'] || item.json['title'];\n\n  // Check if the content exists\n  if (content) {\n    // Optionally, process the content (e.g., converting to uppercase or any other transformation)\n    let processedContent = content.toUpperCase().replace(/<[^>]+>/g, '').replace(/\\n/g, '').replace(/\\t/g, '');  // Example: converting to uppercase\n\n    // Push the processed content into the array\n    processedArray.push(processedContent);\n\n    // Optionally, log the processed content for debugging purposes\n    console.log(processedContent);\n  } else {\n    // If neither content nor title is available, you can handle the case here\n    console.log('No content or title available.');\n  }\n}\n\n// Return the array with the processed content for use in later nodes\nreturn [{ json: { processedArray } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -6624,
+        384
+      ],
+      "id": "a79eaa88-e3e4-49cd-942d-984c6b7d398b",
+      "name": "Code2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ccdefe94-60df-4322-ae36-fd6117a33a02",
+              "name": "output",
+              "value": "={{ $json.output }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -5904,
+        384
+      ],
+      "id": "958e7da9-0926-4098-9035-fcc1a2f6abcc",
+      "name": "Edit Fields2"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Initialize an empty array to store the processed content\nlet processedArray = [];\n\n// Loop over the input items and process them based on the availability of 'content' or 'title'\nfor (const item of $input.all()) {\n  // Extract 'content:encoded' if available, or fallback to 'title' if 'content:encoded' is empty\n  let content = item.json['content:encoded'] || item.json['title'];\n\n  // Check if the content exists\n  if (content) {\n    // Optionally, process the content (e.g., converting to uppercase or any other transformation)\n    let processedContent = content.toUpperCase().replace(/<[^>]+>/g, '').replace(/\\n/g, '').replace(/\\t/g, '');  // Example: converting to uppercase\n\n    // Push the processed content into the array\n    processedArray.push(processedContent);\n\n    // Optionally, log the processed content for debugging purposes\n    console.log(processedContent);\n  } else {\n    // If neither content nor title is available, you can handle the case here\n    console.log('No content or title available.');\n  }\n}\n\n// Return the array with the processed content for use in later nodes\nreturn [{ json: { processedArray } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -7344,
+        -1152
+      ],
+      "id": "68c7db8c-74ec-4788-988f-6718bbc6abb1",
+      "name": "Code3"
+    },
+    {
+      "parameters": {
+        "model": "tngtech/deepseek-r1t2-chimera:free",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        -8448,
+        -2320
+      ],
+      "id": "7ba47996-04d9-44e0-ae68-fed6ba5c8911",
+      "name": "OpenRouter Chat Model3",
+      "credentials": {
+        "openRouterApi": {
+          "id": "0acILuR6mmfubHpA",
+          "name": "OpenRouter account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ccdefe94-60df-4322-ae36-fd6117a33a02",
+              "name": "output",
+              "value": "={{ $json.output }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -6640,
+        -1152
+      ],
+      "id": "0e24c631-8746-46b0-b53d-691b5233571e",
+      "name": "Edit Fields3"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.processedArray }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "You are a oil gold and forex finance analyst, you have access to news titles, make a resume of everything with concise data separation, only use text, the main motif is for investment advice."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.1,
+      "position": [
+        -6304,
+        384
+      ],
+      "id": "856bbb56-1fcf-4040-ae1c-c117053aa80d",
+      "name": "gold oil forex"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.processedArray }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "You are a general finance analyst, you have access to news titles, make a resume of everything with concise data separation, only use text, the main motif is for investment advice."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.1,
+      "position": [
+        -7120,
+        -1152
+      ],
+      "id": "a966ce2f-d740-448d-a4f8-150038c535c7",
+      "name": "economy"
+    },
+    {
+      "parameters": {
+        "numberInputs": 4
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -5056,
+        1216
+      ],
+      "id": "aa50804d-e9b1-4b83-8355-2dc63ddaa970",
+      "name": "merge all"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Initialize an empty array to store the processed content\nlet processedArray = [];\n\n// Loop over the input items and process them based on the availability of 'content' or 'title'\nfor (const item of $input.all()) {\n  // Extract 'content:encoded' if available, or fallback to 'title' if 'content:encoded' is empty\n  let content = item.json.output;\n\n  // Check if the content exists\n  if (content) {\n    // Optionally, process the content (e.g., converting to uppercase or any other transformation)\n    let processedContent = content.toUpperCase().replace(/<[^>]+>/g, '').replace(/\\n/g, '').replace(/\\t/g, '');  // Example: converting to uppercase\n\n    // Push the processed content into the array\n    processedArray.push(processedContent);\n\n    // Optionally, log the processed content for debugging purposes\n    console.log(processedContent);\n  } else {\n    // If neither content nor title is available, you can handle the case here\n    console.log('No content or title available.');\n  }\n}\n\n// Return the array with the processed content for use in later nodes\nreturn [{ json: { processedArray } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -4832,
+        1248
+      ],
+      "id": "af6741b9-25d9-4447-8e89-873209a3a98d",
+      "name": "Code4"
+    },
+    {
+      "parameters": {
+        "numberInputs": 10
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -8000,
+        -1280
+      ],
+      "id": "e2477f3f-60b8-4501-9f27-130b7dce9ffb",
+      "name": "Merge2",
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash-lite-preview-06-17",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -7024,
+        -928
+      ],
+      "id": "7402e6fe-77b8-4d50-ad01-fc0dae5ab0ce",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "96PS8WOosEcIwAyH",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash-lite-preview-06-17",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -6208,
+        608
+      ],
+      "id": "a5cb378c-2c39-40ce-94a5-11cfcb4d97e6",
+      "name": "Google Gemini Chat Model1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "96PS8WOosEcIwAyH",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash-lite-preview-06-17",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -7024,
+        2528
+      ],
+      "id": "5082629a-9c31-4c3f-b903-682c6108e669",
+      "name": "Google Gemini Chat Model2",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "96PS8WOosEcIwAyH",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash-lite-preview-06-17",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -7024,
+        4544
+      ],
+      "id": "ef0a25dc-de74-4241-9781-b30a2ac3dfeb",
+      "name": "Google Gemini Chat Model3",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "96PS8WOosEcIwAyH",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash-lite-preview-06-17",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -4512,
+        1472
+      ],
+      "id": "4803d407-47d6-444f-9d28-901b7ae4cbdc",
+      "name": "Google Gemini Chat Model4",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "96PS8WOosEcIwAyH",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.processedArray }}",
+        "options": {
+          "systemMessage": "You are a finance analyst, you have access to news in a resumed format, make a deep comprehensive report with concise data separation per subjects, the main motif is for investment advice.\n\nAt the end write a possible investment in each subject.\n\nConvert and output text in stylish discord formats. "
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.1,
+      "position": [
+        -4608,
+        1248
+      ],
+      "id": "8b797f1c-4332-48b8-97e2-70617669dbac",
+      "name": "report"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "content",
+        "include": "=",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -3984,
+        1248
+      ],
+      "id": "fe646458-70a4-4bc6-8557-3ee9a125d7de",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "jsCode": "let inputText = $json[\"output\"]; // Replace \"yourKey\" with the actual key holding the string from the previous node\n\n// Replace any occurrences of '*' with '-'\n//inputText = inputText.replace(/\\*/g, '-');\n\n// Check if input is a string\nif (typeof inputText !== \"string\") {\n    throw new Error(\"Input must be a string\");\n}\n\n// Split the text into chunks, ensuring each chunk ends at a sentence boundary\nconst blocks = [];\nlet currentBlock = \"\";\n\n// Regular expression to match sentence-ending punctuation followed by a space or end of string\nconst sentenceEndPattern = /([.!?])(\\s|$)/g;\nlet lastIndex = 0;\n\nwhile (lastIndex < inputText.length) {\n    // Find the next sentence boundary\n    const match = sentenceEndPattern.exec(inputText);\n    if (!match) break;\n\n    const sentenceEnd = match.index + match[0].length;\n\n    // If adding this sentence to the current block doesn't exceed 1800 characters, add it\n    if (currentBlock.length + (sentenceEnd - lastIndex) <= 2000) {\n        currentBlock += inputText.slice(lastIndex, sentenceEnd);\n        lastIndex = sentenceEnd;\n    } else {\n        // If it exceeds 1800 characters, push the current block and start a new one\n        blocks.push(currentBlock.trim());\n        currentBlock = inputText.slice(lastIndex, sentenceEnd);\n        lastIndex = sentenceEnd;\n    }\n}\n\n// Add the last block if there's any leftover text\nif (currentBlock.length > 0) {\n    blocks.push(currentBlock.trim());\n}\n\n// Return the array with a better key name\nreturn blocks.map((block, index) => ({\n    blockNumber: index + 1,\n    content: block\n}));\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -4208,
+        1248
+      ],
+      "id": "9cdeccae-9c50-4359-9ca3-6b001cbd2dbf",
+      "name": "Text Chunk"
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "={{ $json.content }}",
+        "options": {
+          "avatar_url": "https://cdn.pixabay.com/photo/2024/05/13/10/45/man-8758705_960_720.png",
+          "username": "Gold Digger"
+        }
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        -3760,
+        1248
+      ],
+      "id": "1cee795f-5ba8-4e44-9969-f9a3be72c891",
+      "name": "Discord",
+      "webhookId": "a1b3862c-7698-413e-b98d-0bcb1a965c80",
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "IFVGTxv0zpeHoHSb",
+          "name": "anuncios"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "message",
+        "operation": "getAll",
+        "guildId": {
+          "__rl": true,
+          "value": "551555160095064069",
+          "mode": "list",
+          "cachedResultName": "KrusherPT's Corner",
+          "cachedResultUrl": "https://discord.com/channels/551555160095064069"
+        },
+        "channelId": {
+          "__rl": true,
+          "value": "556947256377344011",
+          "mode": "list",
+          "cachedResultName": "🎺┋anúncios",
+          "cachedResultUrl": "https://discord.com/channels/551555160095064069/556947256377344011"
+        },
+        "returnAll": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        -9056,
+        1904
+      ],
+      "id": "650651e2-01f2-42d8-b166-f559da18a5ba",
+      "name": "Get many messages",
+      "webhookId": "3dc26856-8f75-476d-9f61-b06f80ec2b39",
+      "credentials": {
+        "discordOAuth2Api": {
+          "id": "m0YLaEx224gMb8D2",
+          "name": "Discord account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "message",
+        "operation": "deleteMessage",
+        "guildId": {
+          "__rl": true,
+          "value": "551555160095064069",
+          "mode": "id"
+        },
+        "channelId": {
+          "__rl": true,
+          "value": "556947256377344011",
+          "mode": "id"
+        },
+        "messageId": "={{ $json.id }}"
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        -8928,
+        1904
+      ],
+      "id": "51474a7f-933a-481e-aaf7-1957ead14a5c",
+      "name": "Delete a message",
+      "webhookId": "4ee07ed9-51ea-4eea-99f9-c61937838c1b",
+      "credentials": {
+        "discordOAuth2Api": {
+          "id": "m0YLaEx224gMb8D2",
+          "name": "Discord account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 12
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -9280,
+        1904
+      ],
+      "id": "b3198476-bf92-4f23-9b10-05784a48f72f",
+      "name": "Schedule Trigger1"
+    },
+    {
+      "parameters": {
+        "amount": 30
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -7792,
+        2304
+      ],
+      "id": "39a0be0f-171b-4f36-8f66-cb03dd8db8da",
+      "name": "Wait",
+      "webhookId": "0e5bd8aa-13cf-4e22-a30e-e527dba95ced"
+    },
+    {
+      "parameters": {
+        "amount": 30
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -7792,
+        1136
+      ],
+      "id": "b6707123-6405-4b4b-bb10-898e5949a6b4",
+      "name": "Wait1",
+      "webhookId": "96204035-d8db-418d-ba7b-c6011b408bf3"
+    },
+    {
+      "parameters": {
+        "amount": 30
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -7792,
+        320
+      ],
+      "id": "dcb65452-a4b5-4885-8502-ecc4c6da6834",
+      "name": "Wait2",
+      "webhookId": "1df76950-e068-47d7-ad16-022b1d79c575"
+    },
+    {
+      "parameters": {
+        "amount": 30
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -7792,
+        -576
+      ],
+      "id": "bf6b390e-d07a-4a8c-907d-17d920e59419",
+      "name": "Wait3",
+      "webhookId": "88bbfdba-69ec-4e4b-87cd-25aed76d6934"
+    },
+    {
+      "parameters": {
+        "amount": 30
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -7792,
+        -1280
+      ],
+      "id": "9e755416-dd90-45d0-abb6-87bf8743fd10",
+      "name": "Wait4",
+      "webhookId": "9ac6dcba-5c9c-4ad3-b81c-d12e99c24f4d"
+    },
+    {
+      "parameters": {
+        "amount": 30
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -7808,
+        4320
+      ],
+      "id": "c77d4c0b-1e3a-4a25-beeb-fe753e809664",
+      "name": "Wait5",
+      "webhookId": "5dc8cd5b-9352-43cd-a189-38f4a6a71392"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "eurusd",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "eurchf",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "usdjpy",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "usdcad",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "usdchf",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "euraud",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "gbpusd",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "gbpjpy",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "audusd",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "eurgbp",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "eurjpy",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://cointelegraph.com/rss",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://bitcoinist.com/feed/",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://cointelegraph.com/rss/category/market-analysis",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://cointelegraph.com/rss/category/weekly-overview",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://cointelegraph.com/rss/tag/ethereum",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://cointelegraph.com/rss/tag/bitcoin",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://bitcoinist.com/rss",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://cointelegraph.com/rss/tag/monero",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://cointelegraph.com/rss/tag/regulation",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "http://bitcoinist.com/category/ethereum/rss",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://www.goldirainvestmentguy.com/feed/",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://feeds.feedburner.com/BlanchardInvestingNewsBlog",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://www.bullionstar.com/rss/",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://www.mees.com/latest-issue/rss",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "http://www.oilandgas360.com/feed/",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://www.fxempire.com/api/v1/en/articles/rss/news",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://www.fxempire.com/api/v1/en/articles/rss/forecasts",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://feeds.content.dowjones.io/public/rss/mw_topstories",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://www.economywatch.com/feed",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://www.nakedcapitalism.com/feed",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://econbrowser.com/feed",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://gregmankiw.blogspot.com/feeds/posts/default",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://feeds.content.dowjones.io/public/rss/mw_topstories1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://www.investing.com/rss/commodities.rss",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://www.investing.com/rss/stock.rss",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://www.investing.com/rss/bonds.rss",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/business/economy/",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "https://www.ft.com/rss/home",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "eurusd": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "eurchf": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "usdjpy": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "usdcad": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "usdchf": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "euraud": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 5
+          }
+        ]
+      ]
+    },
+    "gbpusd": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 6
+          }
+        ]
+      ]
+    },
+    "gbpjpy": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 7
+          }
+        ]
+      ]
+    },
+    "audusd": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 8
+          }
+        ]
+      ]
+    },
+    "eurgbp": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 9
+          }
+        ]
+      ]
+    },
+    "eurjpy": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 9
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "week filter": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "https://cointelegraph.com/rss": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "https://bitcoinist.com/feed/": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "https://cointelegraph.com/rss/category/market-analysis": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "https://cointelegraph.com/rss/category/weekly-overview": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "https://cointelegraph.com/rss/tag/ethereum": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "https://cointelegraph.com/rss/tag/bitcoin": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 5
+          }
+        ]
+      ]
+    },
+    "https://bitcoinist.com/rss": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 6
+          }
+        ]
+      ]
+    },
+    "https://cointelegraph.com/rss/tag/monero": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 7
+          }
+        ]
+      ]
+    },
+    "https://cointelegraph.com/rss/tag/regulation": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 8
+          }
+        ]
+      ]
+    },
+    "http://bitcoinist.com/category/ethereum/rss": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 9
+          }
+        ]
+      ]
+    },
+    "week filter1": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Wait5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "week filter2": {
+      "main": [
+        [
+          {
+            "node": "Code3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "https://www.ft.com/rss/home": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/business/economy/": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "https://www.investing.com/rss/bonds.rss": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "https://www.investing.com/rss/stock.rss": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "https://www.investing.com/rss/commodities.rss": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "https://feeds.content.dowjones.io/public/rss/mw_topstories1": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "https://gregmankiw.blogspot.com/feeds/posts/default": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 5
+          }
+        ]
+      ]
+    },
+    "https://econbrowser.com/feed": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 6
+          }
+        ]
+      ]
+    },
+    "https://www.nakedcapitalism.com/feed": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 7
+          }
+        ]
+      ]
+    },
+    "https://www.economywatch.com/feed": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 8
+          }
+        ]
+      ]
+    },
+    "https://feeds.content.dowjones.io/public/rss/mw_topstories": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 9
+          }
+        ]
+      ]
+    },
+    "https://www.fxempire.com/api/v1/en/articles/rss/forecasts": {
+      "main": [
+        [
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "https://www.fxempire.com/api/v1/en/articles/rss/news": {
+      "main": [
+        [
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "http://www.oilandgas360.com/feed/": {
+      "main": [
+        [
+          {
+            "node": "Merge4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "https://www.mees.com/latest-issue/rss": {
+      "main": [
+        [
+          {
+            "node": "Merge4",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "https://www.bullionstar.com/rss/": {
+      "main": [
+        [
+          {
+            "node": "Merge5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "https://feeds.feedburner.com/BlanchardInvestingNewsBlog": {
+      "main": [
+        [
+          {
+            "node": "Merge5",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "https://www.goldirainvestmentguy.com/feed/": {
+      "main": [
+        [
+          {
+            "node": "Merge5",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Merge3": {
+      "main": [
+        [
+          {
+            "node": "Wait3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge4": {
+      "main": [
+        [
+          {
+            "node": "Wait2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge5": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "week filter3": {
+      "main": [
+        [
+          {
+            "node": "Merge6",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "week filter4": {
+      "main": [
+        [
+          {
+            "node": "Merge6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "week filter5": {
+      "main": [
+        [
+          {
+            "node": "Merge6",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "crypto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "forex",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "forex": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "crypto": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code2": {
+      "main": [
+        [
+          {
+            "node": "gold oil forex",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code3": {
+      "main": [
+        [
+          {
+            "node": "economy",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model3": {
+      "ai_languageModel": [
+        []
+      ]
+    },
+    "Merge6": {
+      "main": [
+        [
+          {
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "gold oil forex": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "economy": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "merge all",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "merge all",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "node": "merge all",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "node": "merge all",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "merge all": {
+      "main": [
+        [
+          {
+            "node": "Code4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge2": {
+      "main": [
+        [
+          {
+            "node": "Wait4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "economy",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "gold oil forex",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "forex",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "crypto",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "report",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code4": {
+      "main": [
+        [
+          {
+            "node": "report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "report": {
+      "main": [
+        [
+          {
+            "node": "Text Chunk",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Text Chunk": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get many messages": {
+      "main": [
+        [
+          {
+            "node": "Delete a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger1": {
+      "main": [
+        [
+          {
+            "node": "Get many messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "week filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "week filter5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait2": {
+      "main": [
+        [
+          {
+            "node": "week filter3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait3": {
+      "main": [
+        [
+          {
+            "node": "week filter4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait4": {
+      "main": [
+        [
+          {
+            "node": "week filter2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait5": {
+      "main": [
+        [
+          {
+            "node": "week filter1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "a883de10-ac06-4294-8da9-6234cf8e9d27",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "49475570ee8affea4032b9744078a73a859f39838997cbe23a94f3874e4eaee1"
+  },
+  "id": "dcxWFBTywOFdDpMj",
+  "tags": [
+    {
+      "createdAt": "2025-07-20T15:45:43.466Z",
+      "updatedAt": "2025-07-20T15:45:43.466Z",
+      "id": "jp9gB0FisWDbkCvN",
+      "name": "Discord"
+    }
+  ]
+}
