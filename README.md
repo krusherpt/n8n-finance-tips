@@ -63,3 +63,5 @@ Once the workflow is imported and the credentials are set, you can activate it.
 
 Contributions are welcome! If you have suggestions for new data sources, improvements to the AI prompts, or any other enhancements, feel free to open an issue or submit a pull request.
 
+**And obviously this is not financial advice!**
+
